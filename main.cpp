@@ -14,9 +14,9 @@ using namespace std;
 int main(){
 
     int numero_A = 50;
-    int numero_B;
+    int numero_B = 0;
 
-    while (numero != numero_A){
+    while (numero_B != numero_A){
 
         cout << "Intente adivinar un numero: ";
         cin >> numero_B;
@@ -24,7 +24,7 @@ int main(){
         if (numero_B > numero_A)
             cout << "B > A" << endl;
 
-        else if (numero < numero_aleatorio)
+        else if (numero_B < numero_A)
             cout << "B < A" << endl;
 
         else

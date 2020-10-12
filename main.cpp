@@ -8,23 +8,32 @@ repetira el proceso hasta acertar el número seleccionado por usuario.
 */
 
 #include <iostream>
-
+#include<stdlib.h>
 using namespace std;
 
 int main(){
 
-    int numero_A = 50;
+    int numero_A;
     int numero_B = 0;
+    int numero_bajo = 0;
+    int numero_alto = 100;
+    char caracter = ' ';
 
-    while (numero_B != numero_A){
+    cout << "ingrese el numero a adivinar por el programa entre 0 y 100: ";
+    cin >> numero_A;
 
-        cout << "Intente adivinar un numero: ";
-        cin >> numero_B;
+    while ( caracter != '='){
 
-        if (numero_B > numero_A)
+        numero_B = numero_bajo + rand() % (numero_alto - numero_bajo);
+        cout << numero_B << endl;
+        cin >> caracter;
+
+        if (caracter  == '>')
+            numero_alto = numero_B,
             cout << "B > A" << endl;
 
-        else if (numero_B < numero_A)
+        else if (caracter  == '<')
+            numero_bajo = numero_B,
             cout << "B < A" << endl;
 
         else

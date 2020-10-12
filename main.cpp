@@ -29,15 +29,13 @@ int main(){
         cin >> caracter;
 
         if (caracter  == '>')
-            numero_alto = numero_B,
-            cout << "B > A" << endl;
+            numero_alto = numero_B;
 
         else if (caracter  == '<')
-            numero_bajo = numero_B,
-            cout << "B < A" << endl;
+            numero_bajo = numero_B;
 
         else
-            cout << "B = A" << endl;
+            continue;
 
     }
 
